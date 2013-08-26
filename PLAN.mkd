@@ -1,0 +1,12 @@
+# Distributing Work With RabbitMQ
+
+## Install
+    sudo apt-get install rabbitmq-server
+
+## Enable Web Interface
+    sudo rabbitmq-plugins enable rabbitmq_management
+
+Default user/pass is guest/guest
+
+## Install node-amqp
+    npm install amqp
