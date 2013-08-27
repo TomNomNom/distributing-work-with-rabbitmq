@@ -1,19 +1,20 @@
  ╔═══════════════════════════════════════════════════════════════╗
- ║ Direct exchanges                                              ║
+ ║ Topic exchanges                                               ║
  ╠═══════════════════════════════════════════════════════════════╣
  ║                                                               ║
- ║                                                               ║
  ║   ● Messages go to queues with a matching routing key         ║
+ ║   ● Routing keys are dot seperated strings (e.g. foo.bar)     ║
+ ║   ● Partial matches (foo.*) are allowed                       ║
  ║                                                               ║
  ║                                                               ║
- ║                                  ┌┄┄┄┄┄┄┄┐   ┌───┐            ║
- ║                              ┌──▷┊ k = A ├──▷│ S │ A          ║
- ║   A, B, C        ┌┄┄┄┄┄┄┄┄┄┄┐│   └┄┄┄┄┄┄┄┘   └───┘            ║
+ ║   A: foo.bar                     ┌┄┄┄┄┄┄┄┐   ┌───┐            ║
+ ║   B: bar.foo                 ┌──▷┊ foo.* ├──▷│ S │ A, C       ║
+ ║   C: foo.bin     ┌┄┄┄┄┄┄┄┄┄┄┐│   └┄┄┄┄┄┄┄┘   └───┘            ║
  ║  ┌───────────┐   ┊          ├┘   ┌┄┄┄┄┄┄┄┐   ┌───┐            ║
- ║  │ Publisher ├──▷┊ Exchange ├───▷┊ k = B ├──▷│ S │ B          ║
+ ║  │ Publisher ├──▷┊ Exchange ├───▷┊ *.foo ├──▷│ S │ B          ║
  ║  └───────────┘   ┊          ├┐   └┄┄┄┄┄┄┄┘   └───┘            ║
  ║                  └┄┄┄┄┄┄┄┄┄┄┘│   ┌┄┄┄┄┄┄┄┐   ┌───┐            ║
- ║                              └──▷┊ k = C ├──▷│ S │ C          ║
+ ║                              └──▷┊   #   ├──▷│ S │ A, B, C    ║
  ║                                  └┄┄┄┄┄┄┄┘   └───┘            ║
  ║                                                               ║
  ║                                                               ║
