@@ -4,11 +4,15 @@ var connection = amqp.createConnection({host: 'localhost'});
 
 connection.on('ready', function(){
     
-  setInterval(function(){
-    connection.publish('test-queue', {
-      "address": "mail@tomnomnom.com",
-      "subject": "Greetings",
-      "message": "Hi Tom!"
-    });
-  }, 1000);
+  connection.queue('test-queue', function(){
+
+    var counter = 0;
+    setInterval(function(){
+      connection.publish('test-queue', {
+        "count": counter,
+      });
+      counter++;
+    }, 1000);
+  
+  });
 });
