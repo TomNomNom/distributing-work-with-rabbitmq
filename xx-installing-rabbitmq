@@ -1,0 +1,23 @@
+ ╔═══════════════════════════════════════════════════════════════╗
+ ║ Installing RabbitMQ                                           ║
+ ╠═══════════════════════════════════════════════════════════════╣
+ ║                                                               ║
+ ║                                                               ║
+ ║  ● Install RabbitMQ:                                          ║
+ ║      ▶ sudo apt-get install rabbitmq-server                   ║
+ ║                                                               ║
+ ║                                                               ║
+ ║  ● Enable the web interface:                                  ║
+ ║      ▶ sudo rabbitmq-plugins enable rabbitmq_management       ║
+ ║                                                               ║
+ ║                                                               ║
+ ║  ● Install node-amqp:                                         ║
+ ║      ▶ npm install amqp                                       ║
+ ║                                                               ║
+ ║                                                               ║
+ ║                                                               ║
+ ║                                                               ║
+ ║                                                               ║
+ ║                                                               ║
+ ║                                                               ║
+ ╚═══════════════════════════════════════════════════════════════╝
