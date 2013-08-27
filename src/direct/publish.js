@@ -4,7 +4,7 @@ var connection = amqp.createConnection({host: 'localhost'});
 
 connection.on('ready', function(){
     
-  connection.exchange('test-exchange', {type: 'topic'}, function(exchange){
+  connection.exchange('direct-exchange', {type: 'direct'}, function(exchange){
 
     var counter = 0;
     setInterval(function(){
