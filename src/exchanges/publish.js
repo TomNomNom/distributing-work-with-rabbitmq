@@ -4,15 +4,15 @@ var connection = amqp.createConnection({host: 'localhost'});
 
 connection.on('ready', function(){
     
-  connection.queue('basic-queue', function(){
+  connection.exchange('test-exchange', {}, function(exchange){
 
     var counter = 0;
     setInterval(function(){
-      connection.publish('basic-queue', {
+      exchange.publish('test-routing-key', {
         "count": counter,
       });
       counter++;
-    }, 1000);
+    }, 500);
   
   });
 });
