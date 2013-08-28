@@ -1,15 +1,15 @@
  ╔═══════════════════════════════════════════════════════════════╗
- ║ What is a message queue good for?                             ║
+ ║ Real life examples                                            ║
  ╠═══════════════════════════════════════════════════════════════╣
  ║                                                               ║
  ║                                                               ║
- ║  ● Initiating background tasks                                ║
+ ║  ● SkyBet Feed Processing                                     ║
  ║                                                               ║
  ║                                                               ║
- ║  ● Distributing work                                          ║
+ ║  ● Faavorite                                                  ║
  ║                                                               ║
  ║                                                               ║
- ║  ● Decoupling parts of a system                               ║
+ ║  ● SkyBet RPC Buffering                                       ║
  ║                                                               ║
  ║                                                               ║
  ║                                                               ║
