@@ -1,0 +1,3 @@
+# Distributing Work With RabbitMQ
+
+Slides from NodeUpNorth talk on 2013-08-28
